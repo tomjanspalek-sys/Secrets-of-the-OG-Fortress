@@ -46,6 +46,8 @@ public class GameConsole {
         commands.put("hint", new HintCommand());
     }
 
+    //pepega
+
     public void execute(Player player) {
 
 
