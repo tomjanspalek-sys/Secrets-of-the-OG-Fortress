@@ -54,7 +54,7 @@ public class TakeCommand implements Command{
                     }
                 }
                     if(item2!=null){
-                        for (int l = 0; l < itemName1.length; l++) {
+                        for (int l = 0; l < itemName2.length; l++) {
                         if (args[i].equalsIgnoreCase(itemName2[l])) {
                             isMatch[1] = true;
                         }
@@ -68,6 +68,7 @@ public class TakeCommand implements Command{
         if(isMatch[0]) {
             if (item1.isPickupable()){
                 inventory.addItem(item1);
+                roomManager.getRooms().get(currID).getItems().set(0, null);
                 System.out.println(item1.getDescription());
                 compFunc.Sleep(500);
                 FinalMessage =  "You picked up: " + item1.getName();
@@ -77,7 +78,7 @@ public class TakeCommand implements Command{
         if(isMatch[1]) {
             if (item2.isPickupable()){
                 inventory.addItem(item2);
-
+                roomManager.getRooms().get(currID).getItems().set(1, null);
                 System.out.println(item2.getDescription());
                     compFunc.Sleep(800);
                 FinalMessage = "You picked up: " + item2.getName();
