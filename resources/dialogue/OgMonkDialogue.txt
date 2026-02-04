@@ -1,0 +1,30 @@
+                                                        "Hello? Is anyone here?" : Player
+
+OG Monk: "I have been here for a very long time, traveler."
+...
+!!!
+                                        "I am searching for something valuable." : Player
+
+OG Monk: "If you mean the artifact, your road is not over yet."
+...
+!!!
+                                                            "Where should I go?" : Player
+
+OG Monk: "Behind this library, there is a place few dare to enter. The Dark Basement."
+...
+!!!
+                                                                 "What is there?" : Player
+
+OG Monk: "Cold stone, deep shadows... and the way forward."
+...
+!!!
+                                                               "Is it dangerous?" : Player
+
+OG Monk: "Only if you walk there without light. Take a torch with you."
+...
+!!!
+                                                                "And after that?" : Player
+
+OG Monk: "If you survive the Basement, you will reach the Treasury. And beyond it... the final secret."
+...
+!!!

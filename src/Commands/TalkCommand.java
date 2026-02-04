@@ -21,13 +21,12 @@ public class TalkCommand implements Command{
         this.player = player;
     }
 
-//TODO dodelat dialogy postav
     @Override
     public String execute(String[] args) {
         int currID = player.getRoomID();
         Character character = null;
         boolean isMatch = false;
-        String finalMesg = null;
+        String finalMesg = "";
 
         try {
             for (int i = 0; i < roomManager.getCharacters().size(); i++) {
@@ -42,9 +41,15 @@ public class TalkCommand implements Command{
 
                     while ((text = br.readLine()) != null) {
                         if (text.equalsIgnoreCase("...")){
-                            cf.Sleep(500);
-                        }else
+                            cf.Sleep(3000);
+                            text = "";
+                        }
+                        if (text.equalsIgnoreCase("!!!")) {
+                            cf.Line(3);
+                            text = "";
+                        } else {
                             System.out.println(text);
+                        }
                     }
             }catch (FileNotFoundException e) {
                 System.out.println("File not found");
@@ -54,7 +59,6 @@ public class TalkCommand implements Command{
             }
 
             System.out.println();
-            finalMesg = character.getName()+": ,,"+character.getDialogues().get(1)+"'' ";
         } catch (NullPointerException e) {
             return "your mind: ,,it looks like there's nobody i can talk to''";
         }

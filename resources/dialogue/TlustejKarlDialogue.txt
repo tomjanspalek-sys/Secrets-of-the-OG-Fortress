@@ -1,0 +1,41 @@
+                                            "Uh… who are you?" : Player
+
+Tlustej Kárl: "They call me Tlustej Kárl. They always did."
+...
+!!!
+                                              "Why 'Tlustej'?" : Player
+
+Tlustej Kárl: "Hey, I look the way I look. That was my stage name. And my biggest hit."
+...
+!!!
+                                        "You were a musician?" : Player
+
+Tlustej Kárl: "Rapper. Long time ago. I had rhythm, style… and less back pain."
+...
+!!!
+                                    "What are you doing here?" : Player
+
+Tlustej Kárl: "Retirement. Quiet place. Bad acoustics, but cheap rent."
+...
+!!!
+                           "Do you guard something important?" : Player
+
+Tlustej Kárl: "Yeah. Vypecky se zelim. And this rock, but mostly vypecky se zelim."
+...
+!!!
+                               "Any advice for an adventurer?" : Player
+
+Tlustej Kárl: "Sure. Take the treasure, walk tall, and remember: you look the way you look."
+...
+!!!
+                                  "That’s… surprisingly deep." : Player
+
+Tlustej Kárl: "I was deep before it was cool."
+...
+!!!
+
+                                            "Good luck, Kárl." : Player
+
+Tlustej Kárl: "You too, hero. If you hear a beat, think of me."
+...
+!!!

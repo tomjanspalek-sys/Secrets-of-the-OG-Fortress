@@ -15,7 +15,7 @@ public class MapCommand implements Command {
                 "│  ?      ?            │                         │\n" +
                 "│              ?       ▼                         │\n" +
                 "│     ?                                          │\n" +
-                "│  Armory ◄─────── Main Hall ──────► Guard Room  │\n" +
+                "│  Guard Room ◄─────── Main Hall ──────► Armory  │\n" +
                 "│                                                │\n" +
                 "│                      │                         │\n" +
                 "│                      │                         │\n" +
@@ -38,7 +38,7 @@ public class MapCommand implements Command {
                 "│                        │                       │\n" +
                 "└────────────────────────┼───────────────────────┘\n" +
                 "                         │                        \n" +
-                "                         └── tlusetej karl?       ";
+                "                         └── tlustej karl?        ";
     }
 
     @Override

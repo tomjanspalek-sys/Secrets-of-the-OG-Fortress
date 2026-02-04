@@ -1,0 +1,29 @@
+                                                 "Who are you?": Player
+
+Guard's Spirit: "Once, I was the guardian of this fortress. Now I am only a shadow."
+...
+!!!
+                                 "I am looking for the artifact.": Player
+
+Guard's Spirit: "Many before you said the same. None returned."
+...
+!!!
+                                            "How can I reach it?": Player
+
+Guard's Spirit: "The way is blocked. The Treasury is locked by an old door."
+...
+!!!
+                                               "So I need a key?": Player
+
+Guard's Spirit: "Yes. A small iron key. Soldiers liked to hide things in the Guard room."
+...
+!!!
+                                                   "Is that all?": Player
+
+Guard's Spirit: "No. Some places below are dark. Without light, you will not see the path."
+...
+!!!
+                                                     "Thank you.": Player
+
+Guard's Spirit: "Do not thank me too soon, living one."
+...

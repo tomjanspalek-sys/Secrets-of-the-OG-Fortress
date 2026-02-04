@@ -19,8 +19,8 @@ public class SecretItem {
         public void sikritEnding(){
 
 
-
-                cs.Line(10);
+                cs.Sleep(1500);
+                cs.Line(15);
                 System.out.println("oh... what's that?");
                 cs.Sleep(1000);
                 System.out.println("hold on");

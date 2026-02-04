@@ -16,7 +16,6 @@ public class UseCommand implements Command{
         this.inventory = inventory;
     }
 
-    //TODO spravit ze spravny klic u secret chamber napise zpravu, ktera se napise ze nepatri tam
     @Override
     public String execute(String[] args) {
         int currID = player.getRoomID();
@@ -48,7 +47,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
                             if (inventory.getInventory().get(i).getId() == 0) {
                                 inventory.getInventory().remove(i);
@@ -58,7 +57,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
                             if (inventory.getInventory().get(i).getId() == 0) {
                                 inventory.getInventory().remove(i);
@@ -68,7 +67,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
                             if (inventory.getInventory().get(i).getId() == 0) {
                                 inventory.getInventory().remove(i);

@@ -24,15 +24,15 @@ public class SearchCommand implements Command{
 
             System.out.print("\rSearching.");
 
-            cf.Sleep(300);
+            cf.Sleep(200);
 
             System.out.print("\rSearching..");
 
-            cf.Sleep(300);
+            cf.Sleep(200);
 
             System.out.print("\rSearching...");
 
-            cf.Sleep(300);
+            cf.Sleep(200);
 
             repeat++;
         }while(repeat!=3);
