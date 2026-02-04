@@ -21,7 +21,9 @@ public class TakeCommand implements Command{
 
     @Override
     public String execute(String[] args) {
+        boolean secretPicked = false;
         int currID = player.getRoomID();
+
         Item item1 = null;
             String[] itemName1;
         Item item2 = null;
@@ -67,27 +69,37 @@ public class TakeCommand implements Command{
 
         if(isMatch[0]) {
             if (item1.isPickupable()){
-                inventory.addItem(item1);
-                roomManager.getRooms().get(currID).getItems().set(0, null);
-                System.out.println(item1.getDescription());
-                compFunc.Sleep(500);
-                FinalMessage =  "You picked up: " + item1.getName();
+                if (!inventory.isFull()) {
+                    inventory.addItem(item1);
+                    roomManager.getRooms().get(currID).getItems().set(0, null);
+                    System.out.println(item1.getDescription());
+                    compFunc.Sleep(500);
+                    FinalMessage = "You picked up: " + item1.getName();
+                }else {
+                    FinalMessage = "Can't pickup another item, inventory is full";
+                }
             }else
                 FinalMessage = "You can't pick up this";
         }
         if(isMatch[1]) {
             if (item2.isPickupable()){
-                inventory.addItem(item2);
-                roomManager.getRooms().get(currID).getItems().set(1, null);
-                System.out.println(item2.getDescription());
+                if (!inventory.isFull()) {
+                    inventory.addItem(item2);
+                    roomManager.getRooms().get(currID).getItems().set(1, null);
+                    System.out.println(item2.getDescription());
                     compFunc.Sleep(800);
-                FinalMessage = "You picked up: " + item2.getName();
+                    FinalMessage = "You picked up: " + item2.getName();
+                }else {
+                    FinalMessage = "Can't pickup another item, inventory is full";
+                }
             }else
                 FinalMessage = "You can't pick up this";
         }
         if (!isMatch[0] && !isMatch[1]) {
             FinalMessage = "There's no such item";
         }
+
+
 
         return FinalMessage;
     }

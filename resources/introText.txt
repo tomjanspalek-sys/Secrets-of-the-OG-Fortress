@@ -1,0 +1,44 @@
+!!!
+Welcome to the game: Secrets of the OG Fortress.
+...
+
+You are a young adventurer who stands before an abandoned fortress.
+According to legends, a powerful artifact is hidden somewhere inside.
+
+Your goal is to find the artifact and return safely back to the entrance.
+
+You can move between rooms, pick up items, use them and talk to characters.
+...
+...
+
+
+Basic commands:
+-------------------------------------------------------
+Items:
+search - starts searching around the location
+take/pick <item> - picks up item
+drop <item> - drops item from inventory in location
+use <item> - uses item
+
+Player:
+go <direction> (south, north, west, east) - moves player around the map
+stats - prints player's info (location and his inventory)
+hint - prints hint that leads player, through progress (wip)
+map - prints whole map of the game
+
+NPC:
+talk - starts npc dialogue if avaiable
+search - also tells you if there's anyone you can talk to
+
+Game:
+stop/exit - exits the game
+-------------------------------------------------------
+...
+...
+!!!
+
+Good luck, adventurer.
+...
+!!!
+!!!
+!!!

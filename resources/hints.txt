@@ -1,0 +1,9 @@
+There are NPCs you could try talk to.. Maybe they know something?
+You should check the map, what if you missed something? (>> map)
+When i was in the yard i saw something outside..
+I heard the artifact were hidden somewhere in treasury.. I should find a way how to get there..
+I heard Tlustej Kárl is or atleast was hidden somewhere in the fortress
+I should explore and search rooms.. (>> search  |>> go)
+I could try find someone to ask about this place..
+I remember there's guard's spirit that i could try talk to..
+There should be a way i could enter the og basement

@@ -1,24 +1,32 @@
 package Player;
 import World.Item;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
-
+@Getter
+@Setter
 public class Inventory {
 
-    @Getter
+
     private ArrayList<Item> inventory = new ArrayList<>();
     private int capacity = 2;
+    private boolean secretItem = false;
+
+
 
     public boolean addItem(Item item) {
-
         if (!isFull()){
-            return inventory.add(item);
-        }else
-            System.out.println("Can't pickup another item, inventory is full");
-        return false;
+            if (item.getId()==4){
+                secretItem = true;
+            }
 
+            return inventory.add(item);
+
+        }else {
+            return false;
+        }
     }
 
     public void removeItem(Item item) {

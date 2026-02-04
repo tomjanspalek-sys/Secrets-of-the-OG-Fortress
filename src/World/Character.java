@@ -18,6 +18,8 @@ public class Character {
     private String description;
     private List<String> dialogues;
     private int currentRoom;
+    private String dialogueFile;
+    private boolean spoken;
 
 
 }

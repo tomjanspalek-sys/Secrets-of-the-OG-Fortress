@@ -2,6 +2,9 @@ package Util;
 
 //Class from older projects
 
+import Audio.AudioPlayer;
+import Audio.MusicPlayer;
+
 public class CompFunc {
 
     private int duration;
@@ -29,9 +32,14 @@ public class CompFunc {
     public void Line(int amount){
         this.amount = amount;
 
-        for (int i = 0; i <= amount; i++) {
+        for (int i = 0; i <= amount-1; i++) {
             System.out.println();
         }
+    }
+
+    public void Sound(String input) {
+        MusicPlayer.play(AudioPlayer.loadSound(input));
+
     }
 }
 

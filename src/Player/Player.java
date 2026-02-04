@@ -6,15 +6,11 @@ public class Player {
 
     private int roomID;
     private String currentRoomName;
+    private Inventory inventory;
 
-    public Player(int startRoom, RoomManager roomManager) {
-//        for (int i = 0; i < roomManager.getRooms().size(); i++) {
-//            if (roomManager.getRooms().get(i).getId().equals(startRoom)) {
-//                currentRoomName = roomManager.getRooms().get(i).getName();
-//                roomID = roomManager.getRooms().get(i).getId();
-//            }
-//        }
+    public Player(int startRoom, RoomManager roomManager, Inventory inventory) {
         currentRoomName = roomManager.getRooms().get(roomID).getName();
+        this.inventory = inventory;
 
     }
 
@@ -34,7 +30,7 @@ public class Player {
         this.currentRoomName = currentRoomName;
     }
 
-    public Inventory getInventory() {
-        return null;
+    public Inventory inventory() {
+        return inventory;
     }
 }
