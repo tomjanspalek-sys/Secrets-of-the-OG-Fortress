@@ -10,10 +10,12 @@
                 "northID": 8,
                 "east": null,
                 "eastID": null,
-                "west": null,
-                "westID": null
+                "west": "shed",
+                "westID": 9
             },
-            "items": [0,null]
+            "items": [null,null],
+            "locked": false,
+            "dark": false
         },
         {
             "id": 1,
@@ -29,7 +31,9 @@
                 "west": "guard_room",
                 "westID": 4
             },
-            "items": [null,null]
+            "items": [null,null],
+            "locked": false,
+            "dark": false
         },
         {
             "id": 2,
@@ -45,7 +49,9 @@
                 "north": null,
                 "northID": null
             },
-            "items": [2,null]
+            "items": [2,null],
+            "locked": false,
+            "dark": false
         },
         {
             "id": 3,
@@ -61,7 +67,9 @@
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [null,null],
+            "locked": true,
+            "dark": false
         },
         {
             "id": 4,
@@ -77,7 +85,9 @@
                 "west": null,
                 "westID": null
             },
-            "items": [0,1]
+            "items": [0,1],
+            "locked": false,
+            "dark": false
         },
         {
             "id": 5,
@@ -86,30 +96,34 @@
             "connections": {
                 "north": "library",
                 "northID": 3,
-                "south": "treasury",
-                "southID": 6,
-                "east": null,
-                "eastID": null,
+                "south": null,
+                "southID": null,
+                "east": "treasury",
+                "eastID": 6,
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [null,null],
+            "locked": false,
+            "dark": true
         },
         {
             "id": 6,
             "name": "Treasury",
             "description": "The treasury filled with gold and jewels.",
-            "connections": {
-                "north": "dark_basement",
-                "northID": 5,
+            "connections": {    
+                "north": null,
+                "northID": null,
                 "south": "secret_chamber",
                 "southID": 7,
                 "east": null,
                 "eastID": null,
-                "west": null,
-                "westID": null
+                "west": "dark_basement",
+                "westID": 5
             },
-            "items": [3,null]
+            "items": [3,null],
+            "locked": false,
+            "dark": true
         },
         {
             "id": 7,
@@ -125,7 +139,9 @@
                 "west": null,
                 "westID": null
             },
-            "items": [4,null]
+            "items": [4,null],
+            "locked": true,
+            "dark": true
         },
         {
             "id": 8,
@@ -141,7 +157,27 @@
                 "west": null,
                 "westID": null
             },
-            "items": [null,null]
+            "items": [null,null],
+            "locked": false,
+            "dark": false
+        },
+        {
+            "id": 9,
+            "name": "Shed",
+            "description": "A small shed used for storage.",
+            "connections": {
+                "east": "yard",
+                "eastID": 0,
+                "north": null,
+                "northID": null,
+                "south": null,
+                "southID": null,
+                "west": null,
+                "westID": null
+            },
+            "items": [5,null],
+            "locked": false,
+            "dark": false
         }
     ],
     "items": [{
@@ -170,8 +206,14 @@
         },
         {
             "id": 4,
-            "name": "výpečky se zelim",
+            "name": "Vypecky se zelim",
             "description": "OMG WHAT'S THAT????",
+            "pickupable": true
+        },
+        {
+            "id": 5,
+            "name": "Key of mighty Vypecky",
+            "description": "A key that unlocks the something secret.",
             "pickupable": true
         }
     ],
@@ -183,7 +225,9 @@
                 "Halt! Who goes there?",
                 "Stay out of trouble, traveler."
             ],
-            "currentRoom": 4
+            "currentRoom": 4,
+            "dialogueFile": "resources//dialogue//GuardsSpiritDialogue.txt",
+            "spoken": false
         },
         {
             "id": 1,
@@ -193,7 +237,9 @@
                 "Shh... This is a library.",
                 "Knowledge is power."
             ],
-            "currentRoom": 3
+            "currentRoom": 3,
+            "dialogueFile": "resources//dialogue//OgMonkDialogue.txt",
+            "spoken": false
         },
         {
             "id": 2,
@@ -203,7 +249,9 @@
                 "Yo! Welcome to my basement, where the beats drop hard!",
                 "Výpečky se zelim, to je můj styl!"
             ],
-            "currentRoom": 7
+            "currentRoom": 7,
+            "dialogueFile": "resources//dialogue//TlustejKarlDialogue.txt",
+            "spoken": false
         }
     ]
 

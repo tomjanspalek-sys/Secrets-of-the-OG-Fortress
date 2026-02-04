@@ -1,6 +1,7 @@
 package Commands;
 
 import Player.*;
+import World.Exit;
 import World.RoomManager;
 
 import java.util.HashMap;
@@ -20,7 +21,7 @@ public class GameConsole {
     }
 
     public void inicilization(Player player, RoomManager roomManager, Inventory inventory) {
-        commands.put("go", new GoCommand(player, roomManager));
+        commands.put("go", new GoCommand(player, roomManager, new Exit(player)));
         commands.put("exit", new StopCommand());
         commands.put("stop",new StopCommand());
         commands.put("stats", new StatsCommand(player, inventory, roomManager));
@@ -30,10 +31,14 @@ public class GameConsole {
         commands.put("search", new SearchCommand(roomManager, player));
         commands.put("drop", new DropCommand(inventory, roomManager, player));
         commands.put("talk", new TalkCommand(roomManager, player));
-
+        commands.put("use", new UseCommand(roomManager, player, inventory));
+        commands.put("map", new MapCommand());
     }
 
-    public void execute() {
+    public void execute(Player player) {
+
+
+
         System.out.print(">> ");
         String command = scanner.nextLine()+" "+null;
         command = command.trim().toLowerCase();
@@ -42,15 +47,25 @@ public class GameConsole {
         if(commands.containsKey(commandInput[0])) {
             System.out.println(commands.get(commandInput[0]).execute(commandInput));
             isExit = commands.get(commandInput[0]).isExit();
+
+            if (player.inventory().isSecretItem()){
+                SecretItem si = new SecretItem();
+                si.sikritEnding();
+                player.inventory().setSecretItem(false);
+            }
+
         }else{
             System.out.println("Command is not recognized | use 'help' for list of all commands");
         }
+
+
+
     }
 
     public void start(Player player, RoomManager roomManager, Inventory inventory) {
         inicilization(player, roomManager, inventory);
         do {
-            execute();
+            execute(player);
         }while(!isExit);
     }
 

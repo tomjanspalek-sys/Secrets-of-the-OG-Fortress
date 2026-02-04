@@ -19,6 +19,8 @@ public class Room {
     private String description;
     private Connections connections;
     private List<Integer> items;
+    private boolean locked;
+    private boolean dark;
 
 
 }

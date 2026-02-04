@@ -1,6 +1,7 @@
 package Commands;
 
 import Player.*;
+import World.Item;
 import World.RoomManager;
 
 public class UseCommand implements Command{
@@ -15,10 +16,119 @@ public class UseCommand implements Command{
         this.inventory = inventory;
     }
 
-    //TODO dodelat prikaz use
+    //TODO spravit ze spravny klic u secret chamber napise zpravu, ktera se napise ze nepatri tam
     @Override
     public String execute(String[] args) {
-        return "wip";
+        int currID = player.getRoomID();
+        String finalMesg = "";
+
+        String use = "";
+
+        for (int i = 0; i < inventory.getInventory().size(); i++) {
+            if (inventory.getInventory().get(i).getId() == 0) {
+                use = "key1";
+            }
+            if (inventory.getInventory().get(i).getId() == 5) {
+                use = "key2";
+            }
+        }
+
+            switch (use) {
+                case "key1" -> {
+                    if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).isLocked()) {
+                        finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        for (int i = 0; i < inventory.getInventory().size(); i++) {
+                            if (inventory.getInventory().get(i).getId() == 0) {
+                                inventory.getInventory().remove(i);
+                            }
+                        }
+                    }
+                    if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).isLocked()) {
+                        finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        for (int i = 0; i < inventory.getInventory().size(); i++) {
+                            if (inventory.getInventory().get(i).getId() == 0) {
+                                inventory.getInventory().remove(i);
+                            }
+                        }
+                    }
+                    if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).isLocked()) {
+                        finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        for (int i = 0; i < inventory.getInventory().size(); i++) {
+                            if (inventory.getInventory().get(i).getId() == 0) {
+                                inventory.getInventory().remove(i);
+                            }
+                        }
+                    }
+                    if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).isLocked()) {
+                        finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                        roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                        for (int i = 0; i < inventory.getInventory().size(); i++) {
+                            if (inventory.getInventory().get(i).getId() == 0) {
+                                inventory.getInventory().remove(i);
+                            }
+                        }
+                    }
+                }
+                    case "key2" -> {
+                        if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).isLocked()
+                                &&roomManager.getRooms().get(currID).getConnections().getSouthID() == 7&&roomManager.getRooms().get(currID).getConnections().getSouth() != null) {
+                            finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                            roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
+                            for (int i = 0; i < inventory.getInventory().size(); i++) {
+                                if (inventory.getInventory().get(i).getId()==5) {
+                                    inventory.getInventory().remove(i);
+                                }
+                            }
+                        }else if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).isLocked()
+                                &&roomManager.getRooms().get(currID).getConnections().getNorthID() == 7&&roomManager.getRooms().get(currID).getConnections().getNorth() != null) {
+                            finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                            roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).setLocked(false);
+                            for (int i = 0; i < inventory.getInventory().size(); i++) {
+                                if (inventory.getInventory().get(i).getId()==5) {
+                                    inventory.getInventory().remove(i);
+                                }
+                            }
+                        }else if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).isLocked()
+                                &&roomManager.getRooms().get(currID).getConnections().getEastID() == 7&&roomManager.getRooms().get(currID).getConnections().getEast() != null) {
+                            finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                            roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).setLocked(false);
+                            for (int i = 0; i < inventory.getInventory().size(); i++) {
+                                if (inventory.getInventory().get(i).getId()==5) {
+                                    inventory.getInventory().remove(i);
+                                }
+                            }
+                        }else if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).isLocked()
+                                &&roomManager.getRooms().get(currID).getConnections().getWestID() == 7&&roomManager.getRooms().get(currID).getConnections().getWest() != null) {
+                            finalMesg = "You've unlocked the room by key, but the key broke..";
+
+                            roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).setLocked(false);
+                            for (int i = 0; i < inventory.getInventory().size(); i++) {
+                                if (inventory.getInventory().get(i).getId()==5) {
+                                    inventory.getInventory().remove(i);
+                                }
+                            }
+                        }else {
+                            finalMesg = "it looks like this key doesn't fit";
+                        }
+
+                }
+                default -> {
+                    finalMesg = "It looks like you cant use this item";
+                }
+            }
+
+
+        return finalMesg;
     }
 
     @Override
