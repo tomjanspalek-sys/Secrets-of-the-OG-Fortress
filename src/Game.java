@@ -17,6 +17,7 @@ public class Game {
         GameMapLoader GML = new GameMapLoader();
         GML.Load("resources/gamedata.json");
 
+
         try(BufferedReader br = new BufferedReader(new FileReader("resources//introText.txt"))) {
             String text = null;
 
@@ -40,6 +41,7 @@ public class Game {
 
         //System.out.println("Game loaded..");
             cf.Sleep(500);
+
 
 
 

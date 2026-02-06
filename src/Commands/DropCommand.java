@@ -75,6 +75,8 @@ public class DropCommand implements Command {
                     inventory.removeItem(items[0]);
                     changed = true;
             }
+        }else if(!changed){
+            finalMesg = "Looks like it`s already too messy in this room, try to drop it somewhere else";
         }
         if (isMatch[1]) {
             if (roomManager.getRooms().get(currID).getItems().get(0)==null) {
@@ -88,7 +90,7 @@ public class DropCommand implements Command {
                     inventory.removeItem(items[1]);
                     changed = true;
             }
-        }else if(roomManager.getRooms().get(currID).getItems().get(0)!=null&&roomManager.getRooms().get(currID).getItems().get(1)!=null&&!changed){
+        }else if(!changed){
             finalMesg = "Looks like it`s already too messy in this room, try to drop it somewhere else";
         }
 

@@ -1,5 +1,7 @@
 package Commands;
 
+import Audio.AudioPlayer;
+import Audio.MusicPlayer;
 import Player.Player;
 import Util.CompFunc;
 import World.RoomManager;
@@ -39,6 +41,9 @@ public class TalkCommand implements Command{
             try(BufferedReader br = new BufferedReader(new FileReader(character.getDialogueFile()))) {
                 String text = null;
 
+
+                /*MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueSound.wav"));*/
+
                     while ((text = br.readLine()) != null) {
                         if (text.equalsIgnoreCase("...")){
                             cf.Sleep(3000);
@@ -48,7 +53,34 @@ public class TalkCommand implements Command{
                             cf.Line(3);
                             text = "";
                         } else {
-                            System.out.println(text);
+                            String[] words = text.split(" ");
+                            if (words[0].equalsIgnoreCase("p")) {
+                                words[0] = "";
+                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialoguePlayerSound.wav"));
+                                for (int i = 0; i < 50; i++) {
+                                    System.out.print(" ");
+                                }
+                            }
+                            if (words[0].equalsIgnoreCase("N1")) {
+                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPCSound.wav"));
+                                words[0] = "";
+                            }
+                            if (words[0].equalsIgnoreCase("N2")) {
+                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPC2Sound.wav"));
+                                words[0] = "";
+                            }
+                            if (words[0].equalsIgnoreCase("N3")) {
+                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPC3Sound.wav"));
+                                words[0] = "";
+                            }
+
+                                for (int i = 0; i < words.length; i++) {
+                                    System.out.print(words[i] + " ");
+                                    cf.Sleep(200);
+                                }
+                            MusicPlayer.stop();
+                            System.out.println();
+
                         }
                     }
             }catch (FileNotFoundException e) {
@@ -62,6 +94,7 @@ public class TalkCommand implements Command{
         } catch (NullPointerException e) {
             return "your mind: ,,it looks like there's nobody i can talk to''";
         }
+        /*MusicPlayer.stop();*/
 
         return finalMesg;
     }
