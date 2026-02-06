@@ -39,5 +39,39 @@ stop/exit - exits the game
 Good luck, adventurer.
 ...
 !!!
-!!!
-!!!
+
+                    E X I T
+
+                       ▲
+                       │
+┌────────────────────  │  ───────────────────────┐
+│         ?                                      │
+│  ?           ?     Yard  ◄── you start here    │
+│        ?                                       │
+│ ?                    │                         │
+│     ?        ?       ▼                         │
+│                                                │
+│  Armory ◄─────── Main Hall ──────► Guard Room  │
+│                                                │
+│                      │                         │
+│                      │                         │
+│                      ▼                         │
+│                                                │
+│                   Library                      │
+│                                                │
+│                                                │
+│                      │                         │
+│                      ▼                         │
+│                                                │
+│                Dark Basement  ───► Treasury    │
+│                                                │
+│                                       │        │
+│     N                                 │        │
+│     ▲                                 │        │
+│  W─◄┼►─E                              ▼        │
+│     ▼                                          │
+│     S                  ┌─────  Secret Chamber  │
+│                        │                       │
+└────────────────────────┼───────────────────────┘
+                         │
+                         └── tlustej karl?

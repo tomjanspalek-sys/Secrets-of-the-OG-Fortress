@@ -32,7 +32,7 @@ public class GameConsole {
         commands.put("drop", new DropCommand(inventory, roomManager, player));
         commands.put("talk", new TalkCommand(roomManager, player));
         commands.put("use", new UseCommand(roomManager, player, inventory));
-        commands.put("map", new MapCommand());
+        commands.put("map", new MapCommand(player));
         commands.put("hint", new HintCommand());
     }
 

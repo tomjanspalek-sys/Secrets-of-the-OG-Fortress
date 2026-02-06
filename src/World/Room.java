@@ -21,5 +21,4 @@ public class Room {
     private boolean locked;
     private boolean dark;
 
-
 }

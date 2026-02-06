@@ -9,7 +9,7 @@ Player:
 go <direction> (south, north, west, east) - moves player around the map | or >> go - prints directions
 stats - prints player's info (location and his inventory)
 hint - prints hint that leads player through the game and gives ideas
-map - prints whole map of the game
+map - prints whole map of the game with player's location
 
 NPC:
 talk - starts npc dialogue if avaiable

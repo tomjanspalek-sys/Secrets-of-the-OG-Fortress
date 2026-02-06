@@ -225,7 +225,7 @@
                 "Halt! Who goes there?",
                 "Stay out of trouble, traveler."
             ],
-            "currentRoom": 4,
+            "currentRoom": 2,
             "dialogueFile": "resources//dialogue//GuardsSpiritDialogue.txt",
             "spoken": false
         },
