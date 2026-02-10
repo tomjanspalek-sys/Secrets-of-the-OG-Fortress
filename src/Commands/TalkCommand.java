@@ -23,6 +23,12 @@ public class TalkCommand implements Command{
         this.player = player;
     }
 
+    /**
+     * Starts dialogue with character, if it's located in the room
+     * @param args - unused
+     * @return null
+     * all prints are using System.out.print() with animation and sound effects
+     */
     @Override
     public String execute(String[] args) {
         int currID = player.getRoomID();

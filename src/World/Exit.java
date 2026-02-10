@@ -18,11 +18,14 @@ public class Exit {
             this.player = player;
         }
 
+    /**
+     * checks if the winning condition is true
+     * @return true/false -> then tells the game if it was completed or not
+     */
     public boolean End() {
             boolean isEmpty = !player.inventory().getInventory().isEmpty();
             if (isEmpty) {
                 if (player.inventory().getInventory().get(0).getId() == 3 || player.inventory().getInventory().get(1).getId() == 3) {
-                    System.out.println("huste ty");
                     win = true;
                     return true;
                 }

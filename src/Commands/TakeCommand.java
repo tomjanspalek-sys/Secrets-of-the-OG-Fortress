@@ -19,6 +19,12 @@ public class TakeCommand implements Command{
     }
 
 
+    /**
+     * picks up item, that is selected by player
+     * @param args -> checks the player selected item if it's located in the room, then checks the name
+     *             by word and if it's possible, then it adds to player inventory
+     * @return finalMessage -> (typo) returns appropriate message, which is decided by conditions
+     */
     @Override
     public String execute(String[] args) {
         boolean secretPicked = false;

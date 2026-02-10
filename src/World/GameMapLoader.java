@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
 
 public class GameMapLoader {
 
@@ -15,6 +14,11 @@ public class GameMapLoader {
 
     private RoomManager roomManager;
 
+
+    /**
+     * loads json from selected path
+     * @param resourcePath -> String of file path
+     */
     public void Load(String resourcePath){
         ObjectMapper parser = new ObjectMapper();
         try{

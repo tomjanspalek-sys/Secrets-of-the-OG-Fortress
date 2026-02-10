@@ -14,6 +14,7 @@ public class SecretItem {
         /**
          *lyrics timed for songs that is supposed to be form of secret ending
          *  value that is needed to access this secret ending
+         *  with little bit of player's interaction
          */
 
         public void sikritEnding(){

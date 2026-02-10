@@ -15,6 +15,11 @@ public class StatsCommand implements Command {
         this.roomManager = roomManager;
     }
 
+    /**
+     * prints quick info about player(currLocation+desc. + inventory)
+     * @param args - unused
+     * @return string that is modified with information that are needed
+     */
     @Override
     public String execute(String[] args) {
         return  "-------------------------------------------------------------"+

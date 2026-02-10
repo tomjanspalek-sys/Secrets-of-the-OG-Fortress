@@ -7,6 +7,12 @@ import java.io.IOException;
 
 
 public class HelpCommand implements Command{
+
+    /**
+     * prints helpText.txt
+     * @param args - unused
+     * @return help -> prints out all commands with simple guide how to use them
+     */
     @Override
     public String execute(String[] args) {
         String help = "";

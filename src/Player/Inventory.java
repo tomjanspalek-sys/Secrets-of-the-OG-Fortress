@@ -15,7 +15,12 @@ public class Inventory {
     private boolean secretItem = false;
 
 
-
+    /**
+     * adds item to inventory only if !isFull
+     * @param item -> item that is selected by takeCommand
+     * @return true/false, which is compared in takeCommand that uses it to tell
+     * if it failed or not
+     */
     public boolean addItem(Item item) {
         if (!isFull()){
             if (item.getId()==4){

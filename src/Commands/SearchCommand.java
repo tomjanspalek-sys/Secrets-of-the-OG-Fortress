@@ -15,6 +15,13 @@ public class SearchCommand implements Command{
         this.player = player;
     }
 
+    /**
+     * Method that gets player's id of current room
+     * then starts to animated print
+     * @param args - unused
+     * @return - returns message if there's anyone/anything
+     * that player can pick up or can talk to
+     */
     @Override
     public String execute(String[] args) {
             int repeat = 0;

@@ -25,7 +25,13 @@ public class GoCommand implements Command{
         this.exit = exit;
     }
 
-
+    /**
+     * Method that moves player around the map
+     * @param args -> direction that player wants to go
+     *             it is compared by Room info and decides if it can go there or not
+     * @return finalMesg -> returns appropriate message, if it failed it will say something
+     * with you bumped into wall or why you cant go there, otherwise it tells player he moved into his selected direction
+     */
     @Override
     public String execute(String[] args) {
 

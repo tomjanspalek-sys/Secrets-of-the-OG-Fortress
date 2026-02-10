@@ -21,7 +21,12 @@ public class DropCommand implements Command {
     }
 
 
-
+    /**
+     * Method that drops player's selected item in current room
+     * @param args -> it compares by word name of player's selected item with items in current inventory
+     * @return finalMesg -> returns appropriate text, which is selected if player has the item or not
+     * , or if the room has full item slots, it fails and tells to go somewhere else to drop it
+     */
     @Override
     public String execute(String[] args) {
         int currID = player.getRoomID();

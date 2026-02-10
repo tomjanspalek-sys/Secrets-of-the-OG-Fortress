@@ -1,7 +1,12 @@
 package Player;
 import World.Room;
 import World.RoomManager;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Getter
+@Setter
 public class Player {
 
     private int roomID;
@@ -12,22 +17,6 @@ public class Player {
         currentRoomName = roomManager.getRooms().get(roomID).getName();
         this.inventory = inventory;
 
-    }
-
-    public int getRoomID() {
-        return roomID;
-    }
-
-    public void setRoomID(int roomID) {
-        this.roomID = roomID;
-    }
-
-    public String getCurrentRoomName() {
-        return currentRoomName;
-    }
-
-    public void setCurrentRoomName(String currentRoomName) {
-        this.currentRoomName = currentRoomName;
     }
 
     public Inventory inventory() {

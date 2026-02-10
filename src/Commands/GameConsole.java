@@ -20,6 +20,12 @@ public class GameConsole {
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * inicializes all commands with additional inputs, which are then used in commands
+     * @param player -> player class
+     * @param roomManager -> roomManager class
+     * @param inventory -> inventory class (could be accessed through player)
+     */
     public void inicilization(Player player, RoomManager roomManager, Inventory inventory) {
         commands.put("go", new GoCommand(player, roomManager, new Exit(player)));
         commands.put("exit", new StopCommand());

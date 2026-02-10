@@ -1,6 +1,5 @@
 package Commands;
 
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,6 +16,11 @@ public class HintCommand implements Command{
     CompFunc cf = new CompFunc();
     Random rd = new Random();
 
+    /**
+     * prints one of the hints, which are randomly picked
+     * @param args - unused
+     * @return text -> returns selected random hint
+     */
     @Override
     public String execute(String[] args) {
 

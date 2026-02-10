@@ -2,8 +2,6 @@ package Commands;
 
 import Audio.AudioPlayer;
 import Player.*;
-import Util.CompFunc;
-import World.Item;
 import World.RoomManager;
 
 public class UseCommand implements Command{
@@ -18,6 +16,11 @@ public class UseCommand implements Command{
         this.inventory = inventory;
     }
 
+    /**
+     * Method that uses player selected item
+     * @param args -> item that is then used, compareb by word
+     * @return finalMesg -> returns appropriate message that is chosen by conditions
+     */
     @Override
     public String execute(String[] args) {
         int currID = player.getRoomID();
