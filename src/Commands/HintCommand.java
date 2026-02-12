@@ -9,7 +9,10 @@ import java.util.Random;
 
 import Util.CompFunc;
 
-
+/**
+ * One of Command classes, this one takes care of
+ * action hint -> prints out random hint
+ */
 public class HintCommand implements Command{
 
     ArrayList<String> hints = new ArrayList<>();

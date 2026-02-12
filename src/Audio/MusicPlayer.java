@@ -4,6 +4,7 @@ package Audio;
  * A static utility class for managing background music playback.
  * It acts like a "radio" that can only play one song at a time,
  * allowing for global control over the music.
+ * @author matej chaloupka (goat)
  */
 public final class MusicPlayer {
 
@@ -13,7 +14,7 @@ public final class MusicPlayer {
     /**
      * Plays a new music track. If another track is already playing, it will be stopped and replaced.
      *
-     * @param music The {@link Sound} object to be played as music.
+     * @param music The {@link Sound} object to be played as music.¨
      */
     public static void play(final Sound music) {
         if (music == null) {

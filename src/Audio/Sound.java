@@ -7,6 +7,7 @@ import javax.sound.sampled.LineEvent;
 /**
  * Represents a loaded audio clip that can be played, stopped, or looped.
  * This object should be created via the {@link AudioPlayer} class.
+ * @author matej chaloupka (goat)
  */
 public class Sound {
 

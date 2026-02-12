@@ -11,6 +11,11 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+
+/**
+ * Character class that is loaded from
+ * @Class GameMapLoader
+ */
 public class Character {
 
     private int id;

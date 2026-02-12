@@ -9,7 +9,10 @@ import World.Connections;
 import World.Exit;
 import World.RoomManager;
 
-
+/**
+ * One of Command classes, this one takes care of
+ * action go -> moves player around the map
+ */
 public class GoCommand implements Command{
 
     private String finalMessage = "";

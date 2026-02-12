@@ -7,6 +7,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
+/**
+ * Player's Class
+ */
 public class Player {
 
     private int roomID;

@@ -6,6 +6,9 @@ import Util.CompFunc;
 
 import java.util.Scanner;
 
+/**
+ * Class that holds easter egg of picking up secret item
+ */
 public class SecretItem {
 
         private CompFunc cs = new CompFunc();

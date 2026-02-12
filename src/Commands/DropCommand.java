@@ -4,10 +4,12 @@ import Player.Inventory;
 import Player.Player;
 import World.Item;
 import World.RoomManager;
-
-import java.util.Arrays;
 import java.util.List;
 
+/**
+ * One of Command classes, this one takes care of
+ * action drop -> drops player chosen item in current room
+ */
 public class DropCommand implements Command {
 
     private Inventory inventory;

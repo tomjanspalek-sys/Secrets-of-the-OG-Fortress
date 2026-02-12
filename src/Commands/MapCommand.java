@@ -2,6 +2,10 @@ package Commands;
 
 import Player.Player;
 
+/**
+ * One of Command classes, this one takes care of
+ * action map -> prints map with player's current location
+ */
 public class MapCommand implements Command {
 
     private Player player;

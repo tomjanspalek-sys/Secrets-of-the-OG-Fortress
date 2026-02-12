@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
+
+/**
+ * Inventory class checks with simple functions
+ */
 public class Inventory {
 
 

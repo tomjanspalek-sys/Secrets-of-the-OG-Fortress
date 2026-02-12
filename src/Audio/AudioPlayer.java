@@ -7,6 +7,7 @@ import java.io.IOException;
 /**
  * A simple utility class for playing audio files.
  * Supports formats like WAV, AU, AIFF.
+ * @author matej chaloupka (goat)
  */
 public class AudioPlayer {
 

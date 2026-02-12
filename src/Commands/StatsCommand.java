@@ -3,6 +3,10 @@ package Commands;
 import Player.*;
 import World.RoomManager;
 
+/**
+ * One of Command classes, this one takes care of
+ * action Stats -> prints all info about player (inventory, location and location desc.)
+ */
 public class StatsCommand implements Command {
 
     private Inventory inventory;

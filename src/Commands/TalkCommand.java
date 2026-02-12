@@ -12,6 +12,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * One of Command classes, this one takes care of
+ * action talk -> starts dialogue if there's character in current room
+ */
 public class TalkCommand implements Command{
 
     private RoomManager roomManager;

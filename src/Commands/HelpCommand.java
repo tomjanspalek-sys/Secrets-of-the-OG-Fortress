@@ -5,7 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-
+/**
+ * One of Command classes, this one takes care of
+ * action help -> prints list of all commands
+ */
 public class HelpCommand implements Command{
 
     /**

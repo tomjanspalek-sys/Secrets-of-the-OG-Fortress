@@ -9,6 +9,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
+
+/**
+ * Class for items with their properities
+ */
 public class Item {
 
     private int id;

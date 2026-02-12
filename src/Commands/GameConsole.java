@@ -7,6 +7,10 @@ import World.RoomManager;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Console class that controls whole game by commands,
+ * checks player input a starts action of commands
+ */
 public class GameConsole {
 
 

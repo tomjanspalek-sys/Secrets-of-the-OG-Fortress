@@ -1,12 +1,13 @@
 package World;
 
-import Commands.StopCommand;
-import Player.Inventory;
 import Player.Player;
 import Util.CompFunc;
 
-import java.util.function.Predicate;
 
+/**
+ * End game class that is premade Room for starting the
+ * end of the whole game
+ */
 public class Exit {
     private boolean isEnd = false;
 

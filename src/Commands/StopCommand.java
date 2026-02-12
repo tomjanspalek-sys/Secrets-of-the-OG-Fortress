@@ -1,5 +1,9 @@
 package Commands;
 
+/**
+ * One of Command classes, this one takes care of
+ * action stop -> stops the game on player's demand
+ */
 public class StopCommand implements Command{
 
     /**

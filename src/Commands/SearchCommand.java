@@ -10,6 +10,10 @@ public class SearchCommand implements Command{
     private CompFunc cf = new CompFunc();
     private Player player;
 
+    /**
+     * One of Command classes, this one takes care of
+     * action search -> searches player's current room if there's anyone/anything
+     */
     public SearchCommand(RoomManager roomManager, Player player){
         this.roomManager = roomManager;
         this.player = player;

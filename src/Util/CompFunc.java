@@ -5,6 +5,9 @@ package Util;
 import Audio.AudioPlayer;
 import Audio.MusicPlayer;
 
+/**
+ * Class created for using printing aestethics more compactful
+ */
 public class CompFunc {
 
     private int duration;

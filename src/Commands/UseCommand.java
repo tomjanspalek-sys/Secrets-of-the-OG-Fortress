@@ -4,6 +4,10 @@ import Audio.AudioPlayer;
 import Player.*;
 import World.RoomManager;
 
+/**
+ * One of Command classes, this one takes care of
+ * action use -> uses item on player's demand
+ */
 public class UseCommand implements Command{
 
     private RoomManager roomManager;

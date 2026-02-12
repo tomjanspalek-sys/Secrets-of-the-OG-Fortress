@@ -8,6 +8,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Whole brain of the game, creating classes
+ * and prints intro text of the game
+ */
 public class Game {
 
     CompFunc cf = new CompFunc();

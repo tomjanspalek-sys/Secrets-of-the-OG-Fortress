@@ -5,6 +5,10 @@ import Player.Player;
 import Util.CompFunc;
 import World.*;
 
+/**
+ * One of Command classes, this one takes care of
+ * action take -> picks up item, if there's anything to pick up
+ */
 public class TakeCommand implements Command{
 
     private RoomManager roomManager;

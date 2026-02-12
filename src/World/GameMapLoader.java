@@ -6,6 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+/**
+ * The most Important class, load whole game then
+ * devides data in ->
+ * @Class RoomManager
+ */
 public class GameMapLoader {
 
     public RoomManager getRoomManager() {

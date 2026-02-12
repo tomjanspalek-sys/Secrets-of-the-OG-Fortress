@@ -10,6 +10,10 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+
+/**
+ * Class that divides data that are loaded from GML class
+ */
 public class RoomManager {
     private List<Room> rooms;
     private List<Item> items;

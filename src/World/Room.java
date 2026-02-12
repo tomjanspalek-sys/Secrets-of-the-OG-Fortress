@@ -11,6 +11,10 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+
+/**
+ * Class that holds all information of each room
+ */
 public class Room {
 
     private int id;

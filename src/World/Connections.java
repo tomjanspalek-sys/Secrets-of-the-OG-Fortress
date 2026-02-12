@@ -9,6 +9,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
+
+/**
+ * Class for having easy access to connected rooms
+ * when moving from another room
+ */
 public class Connections {
 
         private String north;
