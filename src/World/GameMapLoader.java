@@ -13,11 +13,12 @@ import java.io.InputStream;
  */
 public class GameMapLoader {
 
+    private RoomManager roomManager;
+
     public RoomManager getRoomManager() {
         return roomManager;
     }
 
-    private RoomManager roomManager;
 
 
     /**
@@ -26,17 +27,20 @@ public class GameMapLoader {
      */
     public void Load(String resourcePath){
         ObjectMapper parser = new ObjectMapper();
-        try{
-            InputStream input = new FileInputStream(resourcePath);
+        InputStream input = GameMapLoader.class.getResourceAsStream(resourcePath);
+        if(input == null) {
+            throw new RuntimeException("Unable to load the game");
+        }
+
+        try(input){
             roomManager = parser.readValue(input, RoomManager.class);
             /*System.out.println(roomManager.toString());*/
 
         } catch (FileNotFoundException e) {
-            System.out.println("File not found" + e.getMessage());
+            System.out.println("File not found: " + e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
 }

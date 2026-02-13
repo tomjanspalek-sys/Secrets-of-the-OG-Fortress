@@ -46,7 +46,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                        AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                         roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -58,7 +58,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                        AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                         roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -70,7 +70,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                        AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                         roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -82,7 +82,7 @@ public class UseCommand implements Command{
                     if (roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).isLocked()) {
                         finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                        AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                        AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                         roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).setLocked(false);
                         for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -97,7 +97,7 @@ public class UseCommand implements Command{
                                 &&roomManager.getRooms().get(currID).getConnections().getSouthID() == 7&&roomManager.getRooms().get(currID).getConnections().getSouth() != null) {
                             finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                            AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                            AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                             roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getSouthID()).setLocked(false);
                             for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -109,7 +109,7 @@ public class UseCommand implements Command{
                                 &&roomManager.getRooms().get(currID).getConnections().getNorthID() == 7&&roomManager.getRooms().get(currID).getConnections().getNorth() != null) {
                             finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                            AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                            AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                             roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getNorthID()).setLocked(false);
                             for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -121,7 +121,7 @@ public class UseCommand implements Command{
                                 &&roomManager.getRooms().get(currID).getConnections().getEastID() == 7&&roomManager.getRooms().get(currID).getConnections().getEast() != null) {
                             finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                            AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                            AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                             roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getEastID()).setLocked(false);
                             for (int i = 0; i < inventory.getInventory().size(); i++) {
@@ -133,7 +133,7 @@ public class UseCommand implements Command{
                                 &&roomManager.getRooms().get(currID).getConnections().getWestID() == 7&&roomManager.getRooms().get(currID).getConnections().getWest() != null) {
                             finalMesg = "You've unlocked the room by key, but the key broke..";
 
-                            AudioPlayer.playSound("resources//sounds//doorUnlock.wav");
+                            AudioPlayer.playSound("/sounds/doorUnlock.wav");
 
                             roomManager.getRooms().get(roomManager.getRooms().get(currID).getConnections().getWestID()).setLocked(false);
                             for (int i = 0; i < inventory.getInventory().size(); i++) {

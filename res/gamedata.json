@@ -226,7 +226,7 @@
                 "Stay out of trouble, traveler."
             ],
             "currentRoom": 2,
-            "dialogueFile": "resources//dialogue//GuardsSpiritDialogue.txt",
+            "dialogueFile": "dialogue/GuardsSpiritDialogue.txt",
             "spoken": false
         },
         {
@@ -238,7 +238,7 @@
                 "Knowledge is power."
             ],
             "currentRoom": 3,
-            "dialogueFile": "resources//dialogue//OgMonkDialogue.txt",
+            "dialogueFile": "dialogue/OgMonkDialogue.txt",
             "spoken": false
         },
         {
@@ -250,7 +250,7 @@
                 "Výpečky se zelim, to je můj styl!"
             ],
             "currentRoom": 7,
-            "dialogueFile": "resources//dialogue//TlustejKarlDialogue.txt",
+            "dialogueFile": "dialogue/TlustejKarlDialogue.txt",
             "spoken": false
         }
     ]

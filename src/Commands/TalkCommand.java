@@ -7,10 +7,7 @@ import Util.CompFunc;
 import World.RoomManager;
 import World.Character;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * One of Command classes, this one takes care of
@@ -48,11 +45,34 @@ public class TalkCommand implements Command{
                 }
             }
 
-            try(BufferedReader br = new BufferedReader(new FileReader(character.getDialogueFile()))) {
+            String dialogueFile = character.getDialogueFile();
+
+            InputStream input = TalkCommand.class.getClassLoader().getResourceAsStream(dialogueFile);
+                if(input == null) {
+                    throw new RuntimeException("Unable to load file");
+                }
+
+
+            try(BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
                 String text = null;
 
+                InputStream playerS = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialoguePlayerSound.wav");
+                    if(playerS == null) {
+                        throw new RuntimeException("Unable to load file");
+                    }
+                InputStream sound1 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPCSound.wav");
+                    if(sound1 == null) {
+                        throw new RuntimeException("Unable to load file");
+                    }
+                InputStream sound2 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPC2Sound.wav");
+                    if(sound2 == null) {
+                        throw new RuntimeException("Unable to load file");
+                    }
+                InputStream sound3 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPC3Sound.wav");
+                    if(sound3 == null) {
+                        throw new RuntimeException("Unable to load file");
+                    }
 
-                /*MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueSound.wav"));*/
 
                     while ((text = br.readLine()) != null) {
                         if (text.equalsIgnoreCase("...")){
@@ -66,21 +86,21 @@ public class TalkCommand implements Command{
                             String[] words = text.split(" ");
                             if (words[0].equalsIgnoreCase("p")) {
                                 words[0] = "";
-                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialoguePlayerSound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("/sounds/dialoguePlayerSound.wav"));
                                 for (int i = 0; i < 50; i++) {
                                     System.out.print(" ");
                                 }
                             }
                             if (words[0].equalsIgnoreCase("N1")) {
-                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPCSound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("/sounds/dialogueNPCSound.wav"));
                                 words[0] = "";
                             }
                             if (words[0].equalsIgnoreCase("N2")) {
-                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPC2Sound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("sounds/dialogueNPC2Sound.wav"));
                                 words[0] = "";
                             }
                             if (words[0].equalsIgnoreCase("N3")) {
-                                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds//dialogueNPC3Sound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("sounds/dialogueNPC3Sound.wav"));
                                 words[0] = "";
                             }
 

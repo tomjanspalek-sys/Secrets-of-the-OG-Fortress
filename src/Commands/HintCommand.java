@@ -1,9 +1,6 @@
 package Commands;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -28,8 +25,13 @@ public class HintCommand implements Command{
     public String execute(String[] args) {
 
 
+        InputStream input = HintCommand.class.getClassLoader().getResourceAsStream("hints.txt");
+        if(input == null) {
+            throw new RuntimeException("Unable to load file");
+        }
 
-        try(BufferedReader br = new BufferedReader(new FileReader("resources//hints.txt"))) {
+
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             String text = null;
 
             while ((text = br.readLine()) != null) {

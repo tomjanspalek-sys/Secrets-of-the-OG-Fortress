@@ -1,8 +1,7 @@
 package Audio;
 
 import javax.sound.sampled.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * A simple utility class for playing audio files.
@@ -40,17 +39,24 @@ public class AudioPlayer {
      */
     public static Sound loadSound(final String filePath) {
         try {
-            final var audioFile = new File(filePath);
-            if (!audioFile.exists()) {
-                System.err.println("Audio file not found: " + filePath);
+
+            var inputStream = Sound.class.getResourceAsStream(filePath);
+
+            if (inputStream == null) {
+                System.err.println("Audio file not found in resources: " + filePath);
                 return null;
             }
 
-            final var audioStream = AudioSystem.getAudioInputStream(audioFile);
+            var bufferedStream = new BufferedInputStream(inputStream);
+            var audioStream = AudioSystem.getAudioInputStream(bufferedStream);
+
             final var clip = AudioSystem.getClip();
             clip.open(audioStream);
+
             return new Sound(clip);
+
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
             return null;
         }
     }

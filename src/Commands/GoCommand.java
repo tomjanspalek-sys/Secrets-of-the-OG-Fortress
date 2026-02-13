@@ -194,7 +194,7 @@ public class GoCommand implements Command{
 
                 cf.Line(20);
 
-            cf.Sound("resources//sounds//celebration.wav");
+            cf.Sound("/sounds/celebration.wav");
 
                 cf.Sleep(6000);
 
