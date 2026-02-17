@@ -34,7 +34,7 @@ public class SecretItem {
                 cs.Sleep(2000);
                 cs.Line(5);
 
-                MusicPlayer.play(AudioPlayer.loadSound("resources//sounds/sikrit2.wav"));
+                MusicPlayer.play(AudioPlayer.loadSound("/sounds/sikrit2.wav"));
 
 
                 System.out.println("*---------------Tlustej kárl - Vypadám jak vypadám ---------------*");

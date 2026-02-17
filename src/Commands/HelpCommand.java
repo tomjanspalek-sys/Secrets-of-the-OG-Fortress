@@ -1,9 +1,6 @@
 package Commands;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * One of Command classes, this one takes care of
@@ -19,7 +16,13 @@ public class HelpCommand implements Command{
     @Override
     public String execute(String[] args) {
         String help = "";
-        try(BufferedReader br = new BufferedReader(new FileReader("resources//helpText.txt"))) {
+
+        InputStream input = HelpCommand.class.getResourceAsStream("/helpText.txt");
+        if(input == null) {
+            throw new RuntimeException("Unable to load file");
+        }
+
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             String txt = null;
 
             while ((txt = br.readLine()) != null) {

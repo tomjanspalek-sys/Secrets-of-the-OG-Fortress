@@ -56,23 +56,6 @@ public class TalkCommand implements Command{
             try(BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
                 String text = null;
 
-                InputStream playerS = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialoguePlayerSound.wav");
-                    if(playerS == null) {
-                        throw new RuntimeException("Unable to load file");
-                    }
-                InputStream sound1 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPCSound.wav");
-                    if(sound1 == null) {
-                        throw new RuntimeException("Unable to load file");
-                    }
-                InputStream sound2 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPC2Sound.wav");
-                    if(sound2 == null) {
-                        throw new RuntimeException("Unable to load file");
-                    }
-                InputStream sound3 = TalkCommand.class.getClassLoader().getResourceAsStream("sounds/dialogueNPC3Sound.wav");
-                    if(sound3 == null) {
-                        throw new RuntimeException("Unable to load file");
-                    }
-
 
                     while ((text = br.readLine()) != null) {
                         if (text.equalsIgnoreCase("...")){
@@ -96,11 +79,11 @@ public class TalkCommand implements Command{
                                 words[0] = "";
                             }
                             if (words[0].equalsIgnoreCase("N2")) {
-                                MusicPlayer.play(AudioPlayer.loadSound("sounds/dialogueNPC2Sound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("/sounds/dialogueNPC2Sound.wav"));
                                 words[0] = "";
                             }
                             if (words[0].equalsIgnoreCase("N3")) {
-                                MusicPlayer.play(AudioPlayer.loadSound("sounds/dialogueNPC3Sound.wav"));
+                                MusicPlayer.play(AudioPlayer.loadSound("/sounds/dialogueNPC3Sound.wav"));
                                 words[0] = "";
                             }
 
